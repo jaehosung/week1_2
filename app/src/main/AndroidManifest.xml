@@ -16,9 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FirstTab"></activity>
-        <activity android:name=".SecondTab"></activity>
-        <activity android:name=".ThirdTab"></activity>
+        <activity
+            android:name=".ImageActivity"
+            android:label="Selected Image">
+        </activity>
+
     </application>
 
 </manifest>

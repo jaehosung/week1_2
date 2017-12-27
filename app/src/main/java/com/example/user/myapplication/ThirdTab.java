@@ -21,15 +21,14 @@ public class ThirdTab extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-
-
+    EditText mMemoEdit = null;
+    TextFileManager mTextFileManager = new TextFileManager(getActivity());
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 //        ConstraintLayout layout = (ConstraintLayout) inflater.inflate(R.layout.fragment3,container, false);
 
-        final EditText mMemoEdit = null;
-        final TextFileManager mTextFileManager = new TextFileManager(getActivity());
+
 
         View view = inflater.inflate(R.layout.fragment3, container, false);
 
@@ -43,22 +42,24 @@ public class ThirdTab extends Fragment {
                Toast.makeText(getActivity(), "Successfully loaded", Toast.LENGTH_LONG).show();
             }
         });
+
         Button button2 = (Button)view.findViewById(R.id.save_btn);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 String memoData = mMemoEdit.getText().toString();
+                String memoData = mMemoEdit.getText().toString();
                 mTextFileManager.save(memoData);
                 mMemoEdit.setText("");
                 Toast.makeText(getActivity(), "Successfully saved", Toast.LENGTH_LONG).show();
             }
         });
+
         Button button3 = (Button)view.findViewById(R.id.delete_btn);
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  mTextFileManager.delete();
-              //  mMemoEdit.setText("");
+                mTextFileManager.delete();
+                mMemoEdit.setText("");
                 Toast.makeText(getActivity(), "Successfully deleted", Toast.LENGTH_LONG).show();
             }
         });

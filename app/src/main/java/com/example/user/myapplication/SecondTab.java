@@ -33,6 +33,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.RelativeLayout;
 
 public class SecondTab extends Fragment {
@@ -41,6 +42,42 @@ public class SecondTab extends Fragment {
         // required
     }
 
+    private int[] imageIDs = new int[]{
+            R.drawable.gallery_image_01,
+            R.drawable.gallery_image_02,
+            R.drawable.gallery_image_03,
+            R.drawable.gallery_image_04,
+            R.drawable.gallery_image_05,
+            R.drawable.gallery_image_06,
+            R.drawable.gallery_image_07,
+            R.drawable.gallery_image_08,
+            R.drawable.gallery_image_09,
+            R.drawable.gallery_image_10,
+            R.drawable.gallery_image_11,
+            R.drawable.gallery_image_12,
+            R.drawable.gallery_image_13,
+            R.drawable.gallery_image_14,
+            R.drawable.gallery_image_15,
+            R.drawable.gallery_image_16,
+            R.drawable.gallery_image_01,
+            R.drawable.gallery_image_02,
+            R.drawable.gallery_image_03,
+            R.drawable.gallery_image_04,
+            R.drawable.gallery_image_05,
+            R.drawable.gallery_image_06,
+            R.drawable.gallery_image_07,
+            R.drawable.gallery_image_08,
+            R.drawable.gallery_image_09,
+            R.drawable.gallery_image_10,
+            R.drawable.gallery_image_11,
+            R.drawable.gallery_image_12,
+            R.drawable.gallery_image_13,
+            R.drawable.gallery_image_14,
+            R.drawable.gallery_image_15,
+            R.drawable.gallery_image_16
+    };
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,10 +85,13 @@ public class SecondTab extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        ConstraintLayout layout = (ConstraintLayout) inflater.inflate(R.layout.fragment2,
-                container, false);
-        return layout;
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        //RelativeLayout layout = (RelativeLayout)inflater.inflate(R.layout.fragment2, container, false);
+        View myfragmentView = inflater.inflate(R.layout.fragment2,container,false);
+        GridView gridViewImages = (GridView) myfragmentView.findViewById(R.id.gridViewImages);
+        ImageGridAdapter imageGridAdapter = new ImageGridAdapter(getActivity(), imageIDs);
+        gridViewImages.setAdapter(imageGridAdapter);
+
+        return myfragmentView;
     }
 }

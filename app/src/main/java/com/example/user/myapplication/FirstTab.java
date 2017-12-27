@@ -82,6 +82,29 @@ public class FirstTab extends Fragment {
         adapter.addItem(ContextCompat.getDrawable(getActivity().getApplicationContext(), R.drawable.ic_launcher_foreground),
                 "가나다", "010-000-0000") ;
 
+        adapter.addItem(ContextCompat.getDrawable(getActivity().getApplicationContext(), R.drawable.ic_launcher_foreground),
+                "가나다", "010-000-0000") ;
+
+        adapter.addItem(ContextCompat.getDrawable(getActivity().getApplicationContext(), R.drawable.ic_launcher_foreground),
+                "가나다", "010-000-0000") ;
+
+        adapter.addItem(ContextCompat.getDrawable(getActivity().getApplicationContext(), R.drawable.ic_launcher_foreground),
+                "가나다", "010-000-0000") ;
+
+        adapter.addItem(ContextCompat.getDrawable(getActivity().getApplicationContext(), R.drawable.ic_launcher_foreground),
+                "가나다", "010-000-0000") ;
+
+        adapter.addItem(ContextCompat.getDrawable(getActivity().getApplicationContext(), R.drawable.ic_launcher_foreground),
+                "가나다", "010-000-0000") ;
+
+        adapter.addItem(ContextCompat.getDrawable(getActivity().getApplicationContext(), R.drawable.ic_launcher_foreground),
+                "가나다", "010-000-0000") ;
+
+        adapter.addItem(ContextCompat.getDrawable(getActivity().getApplicationContext(), R.drawable.ic_launcher_foreground),
+                "가나다", "010-000-0000") ;
+
+        adapter.addItem(ContextCompat.getDrawable(getActivity().getApplicationContext(), R.drawable.ic_launcher_foreground),
+                "가나다", "010-000-0000") ;
         return v;
     }
 

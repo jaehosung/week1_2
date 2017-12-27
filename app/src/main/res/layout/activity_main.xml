@@ -6,43 +6,46 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_below="@+id/ll"></android.support.v4.view.ViewPager>
+
         <LinearLayout
             android:id="@+id/ll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff">
 
             <Button
                 android:id="@+id/btn_first"
                 android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="전화번호부"/>
+                android:text="Contacts"
+                android:background="#ffffff"
+                />
 
             <Button
                 android:id="@+id/btn_second"
                 android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="갤러리"
-                />
+                android:background="#ffffff"
+                android:text="Gallery" />
 
             <Button
                 android:id="@+id/btn_third"
                 android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Third Tab"
-                />
+                android:background="#ffffff"
+                android:text="Memo" />
 
         </LinearLayout>
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/ll"
-            >
-        </android.support.v4.view.ViewPager>
 
     </RelativeLayout>

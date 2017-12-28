@@ -43,7 +43,7 @@ package com.example.kjh.viewpager_fragment;
 public class FirstTab extends Fragment {
         public FirstTab()
     {
-        // required
+        // required t
     }
 
     static final String[] LIST_MENU = {"LIST1", "LIST2", "LIST3"} ;
@@ -73,7 +73,7 @@ public class FirstTab extends Fragment {
         listview.setAdapter(adapter);
 
         StringBuffer sb = new StringBuffer();
-        String str = "[{'name':'도레미','number':010-1234-5678'},"+"{'name':'가나다','number':'010-4321-9876'},"+ "{'name':'도레미','number':010-1234-5678'},"+"{'name':'가나다','number':'010-4321-9876'},"+ "{'name':'도레미','number':010-1234-5678'},"+"{'name':'가나다','number':'010-4321-9876'},"+ "{'name':'도레미','number':010-1234-5678'},"+"{'name':'가나다','number':'010-4321-9876'}]";
+        String str = "[{'name':'도레미','number':010-1234-5678},"+"{'name':'가나다','number':'010-4321-9876'},"+ "{'name':'도레미','number':010-1234-5678},"+"{'name':'가나다','number':'010-4321-9876'},"+ "{'name':'도레미','number':010-1234-5678},"+"{'name':'가나다','number':'010-4321-9876'},"+ "{'name':'도레미','number':010-1234-5678},"+"{'name':'가나다','number':'010-4321-9876'}]";
 
         try {
             JSONArray jarray = new JSONArray(str);   // JSONArray 생성

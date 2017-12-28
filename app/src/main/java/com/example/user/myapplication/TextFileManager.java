@@ -1,6 +1,7 @@
 package com.example.user.myapplication;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -20,6 +21,7 @@ public class TextFileManager {
 
     public void save(String strData){
         if(strData == null || strData.equals("")){
+
             return;
         }
         FileOutputStream fosMemo = null;
@@ -27,7 +29,7 @@ public class TextFileManager {
             fosMemo = mContext.openFileOutput(FILE_NAME, Context.MODE_PRIVATE);
             fosMemo.write(strData.getBytes());
             fosMemo.close();
-        }
+         }
         catch(Exception e){
             e.printStackTrace();
         }

@@ -89,7 +89,7 @@ public class SecondTab extends Fragment {
         //RelativeLayout layout = (RelativeLayout)inflater.inflate(R.layout.fragment2, container, false);
         View myfragmentView = inflater.inflate(R.layout.fragment2,container,false);
         GridView gridViewImages = (GridView) myfragmentView.findViewById(R.id.gridViewImages);
-        ImageGridAdapter imageGridAdapter = new ImageGridAdapter(getActivity(), imageIDs);
+        com.example.user.myapplication.ImageGridAdapter imageGridAdapter = new com.example.user.myapplication.ImageGridAdapter(getActivity(), imageIDs);
         gridViewImages.setAdapter(imageGridAdapter);
 
         return myfragmentView;

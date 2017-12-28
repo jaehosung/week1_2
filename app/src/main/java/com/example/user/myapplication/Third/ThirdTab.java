@@ -21,9 +21,9 @@ public class ThirdTab extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+
     EditText mMemoEdit = null;
     TextFileManager mTextFileManager = null;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

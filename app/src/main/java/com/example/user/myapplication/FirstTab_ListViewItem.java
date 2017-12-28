@@ -5,7 +5,7 @@ package com.example.user.myapplication;
  */
 import android.graphics.drawable.Drawable;
 
-public class ListViewItem {
+public class FirstTab_ListViewItem {
     private Drawable iconDrawable ;
     private String titleStr ;
     private String descStr ;

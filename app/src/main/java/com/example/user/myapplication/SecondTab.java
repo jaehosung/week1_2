@@ -28,13 +28,13 @@ package com.example.kjh.viewpager_fragment;
 */
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
-import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class SecondTab extends Fragment {
     public SecondTab()
@@ -83,14 +83,18 @@ public class SecondTab extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //RelativeLayout layout = (RelativeLayout)inflater.inflate(R.layout.fragment2, container, false);
         View myfragmentView = inflater.inflate(R.layout.fragment2,container,false);
         GridView gridViewImages = (GridView) myfragmentView.findViewById(R.id.gridViewImages);
-        com.example.user.myapplication.ImageGridAdapter imageGridAdapter = new com.example.user.myapplication.ImageGridAdapter(getActivity(), imageIDs);
+        SecondTab_ImageGridAdapter imageGridAdapter = new SecondTab_ImageGridAdapter(getActivity(),imageIDs, getActivity());
         gridViewImages.setAdapter(imageGridAdapter);
+
+
+
 
         return myfragmentView;
     }

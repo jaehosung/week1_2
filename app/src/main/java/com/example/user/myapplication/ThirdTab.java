@@ -2,14 +2,12 @@ package com.example.user.myapplication;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class ThirdTab extends Fragment {
@@ -23,14 +21,14 @@ public class ThirdTab extends Fragment {
     }
 
     EditText mMemoEdit = null;
-    TextFileManager mTextFileManager = null;
+    ThirdTab_TextFileManager mTextFileManager = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 //        ConstraintLayout layout = (ConstraintLayout) inflater.inflate(R.layout.fragment3,container, false);
 
         mMemoEdit = null;
-        mTextFileManager = new TextFileManager(getContext());
+        mTextFileManager = new ThirdTab_TextFileManager(getContext());
 
         View view = inflater.inflate(R.layout.fragment3, container, false);
         mMemoEdit=(EditText) view.findViewById(R.id.memo_edit);

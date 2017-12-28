@@ -61,10 +61,10 @@ public class FirstTab extends Fragment {
 
 
             ListView listview ;
-        com.example.user.myapplication.ListViewAdapter adapter;
+        FirstTab_ListViewAdapter adapter;
 
         // Adapter 생성
-        adapter = new com.example.user.myapplication.ListViewAdapter() ;
+        adapter = new FirstTab_ListViewAdapter() ;
 
         // 리스트뷰 참조 및 Adapter달기
         View v = inflater.inflate(R.layout.fragment1,container,false);

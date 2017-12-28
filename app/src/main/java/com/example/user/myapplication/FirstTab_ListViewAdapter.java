@@ -14,19 +14,19 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class ListViewAdapter extends BaseAdapter {
+public class FirstTab_ListViewAdapter extends BaseAdapter {
     // Adapter에 추가된 데이터를 저장하기 위한 ArrayList
-    private ArrayList<com.example.user.myapplication.ListViewItem> listViewItemList = new ArrayList<com.example.user.myapplication.ListViewItem>() ;
+    private ArrayList<FirstTab_ListViewItem> listViewItemFirstTabList = new ArrayList<FirstTab_ListViewItem>() ;
 
     // ListViewAdapter의 생성자
-    public ListViewAdapter() {
+    public FirstTab_ListViewAdapter() {
 
     }
 
     // Adapter에 사용되는 데이터의 개수를 리턴. : 필수 구현
     @Override
     public int getCount() {
-        return listViewItemList.size() ;
+        return listViewItemFirstTabList.size() ;
     }
 
     // position에 위치한 데이터를 화면에 출력하는데 사용될 View를 리턴. : 필수 구현
@@ -46,13 +46,13 @@ public class ListViewAdapter extends BaseAdapter {
         TextView titleTextView = (TextView) convertView.findViewById(R.id.textView1) ;
         TextView descTextView = (TextView) convertView.findViewById(R.id.textView2) ;
 
-        // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
-        com.example.user.myapplication.ListViewItem listViewItem = listViewItemList.get(position);
+        // Data Set(listViewItemFirstTabList)에서 position에 위치한 데이터 참조 획득
+        FirstTab_ListViewItem firstTabListViewItem = listViewItemFirstTabList.get(position);
 
         // 아이템 내 각 위젯에 데이터 반영
-        iconImageView.setImageDrawable(listViewItem.getIcon());
-        titleTextView.setText(listViewItem.getTitle());
-        descTextView.setText(listViewItem.getDesc());
+        iconImageView.setImageDrawable(firstTabListViewItem.getIcon());
+        titleTextView.setText(firstTabListViewItem.getTitle());
+        descTextView.setText(firstTabListViewItem.getDesc());
 
         return convertView;
     }
@@ -66,17 +66,17 @@ public class ListViewAdapter extends BaseAdapter {
     // 지정한 위치(position)에 있는 데이터 리턴 : 필수 구현
     @Override
     public Object getItem(int position) {
-        return listViewItemList.get(position) ;
+        return listViewItemFirstTabList.get(position) ;
     }
 
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
     public void addItem(Drawable icon, String title, String desc) {
-        com.example.user.myapplication.ListViewItem item = new com.example.user.myapplication.ListViewItem();
+        FirstTab_ListViewItem item = new FirstTab_ListViewItem();
 
         item.setIcon(icon);
         item.setTitle(title);
         item.setDesc(desc);
 
-        listViewItemList.add(item);
+        listViewItemFirstTabList.add(item);
     }
 }

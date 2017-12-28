@@ -11,11 +11,11 @@ import java.io.IOException;
  * Created by user on 2017-12-27.
  */
 
-public class TextFileManager {
+public class ThirdTab_TextFileManager {
     private static final String FILE_NAME = "Memo.txt";
     Context mContext = null;
 
-    public TextFileManager(Context context) {
+    public ThirdTab_TextFileManager(Context context) {
         mContext = context;
     }
 

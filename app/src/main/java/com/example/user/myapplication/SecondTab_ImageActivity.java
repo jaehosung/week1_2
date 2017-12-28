@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 
-public class ImageActivity extends Activity {
+public class SecondTab_ImageActivity extends Activity {
 
 
 

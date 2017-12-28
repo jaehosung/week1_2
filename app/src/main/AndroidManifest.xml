@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ImageActivity"
+            android:name=".SecondTab_ImageActivity"
             android:label="Selected Image">
         </activity>
 

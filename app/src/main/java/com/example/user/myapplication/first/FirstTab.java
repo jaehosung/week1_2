@@ -27,7 +27,6 @@ public class FirstTab extends Activity{
 package com.example.kjh.viewpager_fragment;
 */
         import android.os.Bundle;
-        import android.support.annotation.Nullable;
         import android.support.constraint.ConstraintLayout;
         import android.support.v4.app.Fragment;
         import android.support.v4.app.FragmentActivity;
@@ -35,10 +34,7 @@ package com.example.kjh.viewpager_fragment;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
-        import android.widget.LinearLayout;
         import android.widget.ListView;
-        import android.widget.RelativeLayout;
-        import android.widget.TextView;
 
         import org.json.JSONArray;
         import org.json.JSONException;
@@ -59,7 +55,7 @@ public class FirstTab extends Fragment {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             fa = super.getActivity();
-            ll = (ConstraintLayout) inflater.inflate(R.layout.fragment, container, false);
+            ll = (ConstraintLayout) inflater.inflate(R.layout.fragment1, container, false);
 
 
 
@@ -71,7 +67,7 @@ public class FirstTab extends Fragment {
         adapter = new com.example.user.myapplication.ListViewAdapter() ;
 
         // 리스트뷰 참조 및 Adapter달기
-        View v = inflater.inflate(R.layout.fragment,container,false);
+        View v = inflater.inflate(R.layout.fragment1,container,false);
         listview =  v.findViewById(R.id.listview1);
         //listview = getView().findViewById(R.id.listview1);
         listview.setAdapter(adapter);

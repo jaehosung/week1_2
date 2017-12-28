@@ -101,11 +101,11 @@ public class MainActivity extends AppCompatActivity {
             switch(position)
             {
                 case 0:
-                    return new FirstTab();
+                    return new com.example.user.myapplication.FirstTab();
                 case 1:
-                    return new SecondTab();
+                    return new com.example.user.myapplication.SecondTab();
                 case 2:
-                    return new ThirdTab();
+                    return new com.example.user.myapplication.ThirdTab();
                 default:
                     return null;
             }

@@ -13,7 +13,7 @@ public class ImageActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.simple_image);
+        setContentView(R.layout.fragment2_simple_image);
 
         //----------------------------------------------------------------
         // 확대되는 이미지를 보여주기 위해 ImageView 뷰를 설정합니다.
